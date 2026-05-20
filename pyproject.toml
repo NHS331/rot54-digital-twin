@@ -1,0 +1,21 @@
+[project]
+name = "rot54-digital-twin"
+version = "0.1.0"
+description = "Python-first digital scientific twin of the ROT-54/2.6 radio-optical telescope"
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "astropy",
+    "skyfield",
+    "matplotlib",
+    "pyyaml",
+    "pyvista",
+    "trimesh",
+    "pytest"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

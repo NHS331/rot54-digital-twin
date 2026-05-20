@@ -1,0 +1,22 @@
+﻿panel_response:
+  input_dir: "outputs/panel_thermal"
+  output_dir: "outputs/panel_response"
+  figures_dir: "outputs/figures/panel_response"
+
+  input_glob: "panel_thermal_*_*.csv"
+
+  # Displacement thresholds for reporting.
+  # Units: mm
+  response_thresholds_mm:
+    - 0.01
+    - 0.025
+    - 0.05
+    - 0.10
+    - 0.20
+
+  # Figure fields.
+  figure_fields:
+    - "u_rms_central_min_mm"
+    - "u_rms_central_max_mm"
+    - "u_rms_upper_mm"
+    - "u_peak_to_peak_upper_mm"

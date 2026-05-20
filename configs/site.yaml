@@ -1,0 +1,11 @@
+site:
+  name: "ROT-54/2.6 Orgov"
+  latitude_deg: 40.3508609
+  longitude_deg: 44.2417924
+  altitude_m: 1711.0
+  timezone: "Asia/Yerevan"
+  coordinate_status: "provisional; must be verified"
+
+antenna_axis:
+  tilt_deg: 15.0
+  tilt_direction: "south"

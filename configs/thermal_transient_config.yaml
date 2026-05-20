@@ -1,0 +1,54 @@
+﻿thermal_transient:
+  output_dir: "outputs/thermal_transient"
+  figures_dir: "outputs/figures/thermal_transient"
+
+  # Transient model time step.
+  # We use 10 minutes for the first full-day engineering run.
+  # Later this can be reduced to 5 min or 1 min after performance checks.
+  time_step_minutes: 10
+
+  # We calculate all three seasonal cases.
+  cases:
+    - "spring_equinox"
+    - "summer_solstice"
+    - "winter_solstice"
+
+  # Wind scenarios.
+  wind_speeds_m_s:
+    - 0.0
+    - 2.0
+    - 5.0
+    - 10.0
+
+  # Thermal inertia of the panel surface.
+  #
+  # C_A = rho * c_p * h_eff
+  #
+  # h_eff is a mass-equivalent thermal thickness, not the literal sheet thickness.
+  # This is a first engineering value. It must later be refined using measured
+  # or documented panel mass and construction.
+  material:
+    density_kg_m3: 2700.0
+    specific_heat_J_kg_K: 900.0
+    mass_equivalent_thickness_m: 0.015
+
+  # Initial condition:
+  # The model starts at 00:00 local time from the night equilibrium temperature
+  # for q_abs = 0 under the selected air/sky/wind scenario.
+  initial_condition:
+    mode: "night_equilibrium"
+
+  # Numerical settings.
+  solver:
+    minimum_temperature_K: 150.0
+    maximum_temperature_K: 450.0
+
+  # Snapshot rules.
+  # morning: one hour after first front-side illumination
+  # axis: moment of maximum dot(axis, sun)
+  # evening: one hour before last front-side illumination
+  # peak: moment of maximum daily surface-temperature maximum
+  snapshots:
+    morning_offset_minutes_after_front_start: 60
+    evening_offset_minutes_before_front_end: 60
+    include_peak_snapshot: true

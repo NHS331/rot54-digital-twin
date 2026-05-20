@@ -1,0 +1,15 @@
+parameter,value,unit,comment
+diameter_m,54.0,m,Main reflector diameter
+aperture_radius_m,27.0,m,Projected aperture radius
+spherical_radius_m,27.0,m,Spherical surface radius used in current model
+panel_count,3738.0,count,Nominal number of panel elements
+grid_size,301.0,points per axis,Sampling resolution
+inside_aperture_points,70673.0,points,Number of generated points inside circular aperture
+theoretical_projected_area_m2,2290.221044466959,m^2,pi * R^2
+grid_projected_area_m2,2289.8052,m^2,Approximate area represented by the grid
+grid_area_relative_error_percent,-0.0181573943687182,%,Grid discretization area error
+z_min_m,-27.0,m,Minimum z value of spherical bowl
+z_max_m,-0.0,m,Maximum z value near aperture rim
+z_center_expected_m,-27.0,m,Expected center depth for hemispherical approximation
+normal_length_min,0.9999999999999998,-,Minimum unit-normal length
+normal_length_max,1.0000000000000002,-,Maximum unit-normal length

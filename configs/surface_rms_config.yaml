@@ -1,0 +1,30 @@
+﻿surface_rms:
+  input_dir: "outputs/panel_response"
+  output_dir: "outputs/surface_rms"
+  figures_dir: "outputs/figures/surface_rms"
+
+  input_glob: "panel_response_*_*.csv"
+
+  # Frequencies for Ruze efficiency checks.
+  frequencies_GHz:
+    - 4.5
+    - 30.0
+    - 100.0
+
+  # Surface RMS aggregation mode.
+  #
+  # weighted_by_grid_points:
+  #   Uses panel_grid_point_count as an approximate area weight.
+  #
+  # unweighted:
+  #   Treats every equivalent panel equally.
+  #
+  # We save both, but use weighted_by_grid_points as the primary value.
+  primary_weighting: "weighted_by_grid_points"
+
+  # Threshold for counting thermally active panels.
+  # Units: mm. This is not used in RMS itself; it is only a reporting metric.
+  active_panel_u_rms_threshold_mm: 0.001
+
+  # Worst-case report length.
+  top_n_worst_cases: 20

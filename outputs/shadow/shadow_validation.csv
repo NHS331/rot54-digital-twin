@@ -1,0 +1,4 @@
+case_key,chi_binary_ok,shadow_only_inside_potential_ok,factor_equation_ok,factor_range_ok,max_factor_equation_error,all_shadow_checks_ok
+spring_equinox,True,True,True,True,0.0,True
+summer_solstice,True,True,True,True,0.0,True
+winter_solstice,True,True,True,True,0.0,True

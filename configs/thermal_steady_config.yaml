@@ -1,0 +1,46 @@
+﻿thermal_steady:
+  output_dir: "outputs/thermal_steady"
+  figures_dir: "outputs/figures/thermal_steady"
+
+  # Wind cases for convective cooling.
+  wind_speeds_m_s:
+    - 0.0
+    - 2.0
+    - 5.0
+    - 10.0
+
+  # First seasonal weather scenarios.
+  # These are engineering scenario values, not yet measured meteorological data.
+  #
+  # Later we will replace or correct them using real local weather datasets.
+  seasonal_weather:
+    spring_equinox:
+      air_temperature_C: 18.0
+      sky_temperature_C: 5.0
+
+    summer_solstice:
+      air_temperature_C: 32.0
+      sky_temperature_C: 18.0
+
+    winter_solstice:
+      air_temperature_C: -5.0
+      sky_temperature_C: -18.0
+
+  # Nonlinear steady-state balance:
+  #
+  # q_abs = h(v) * (T_s - T_air)
+  #       + epsilon * sigma * (T_s^4 - T_sky^4)
+  #
+  # T is solved in Kelvin, then exported in Celsius.
+  solver:
+    lower_temperature_K: 150.0
+    upper_temperature_K: 450.0
+    iterations: 80
+    residual_tolerance_W_m2: 0.000001
+
+  # Extra anomaly outputs.
+  # deltaT_air_C = T_surface_C - T_air_C
+  # deltaT_aperture_mean_C = T_surface_C - mean(T_surface_C over full aperture)
+  output_anomaly_modes:
+    - "air"
+    - "aperture_mean"

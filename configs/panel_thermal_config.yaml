@@ -1,0 +1,28 @@
+﻿panel_thermal:
+  output_dir: "outputs/panel_thermal"
+  figures_dir: "outputs/figures/panel_thermal"
+
+  # We use the equivalent cell size from the reduced panel model:
+  # L_eq ≈ sqrt(S_cell) ≈ 0.783 m.
+  #
+  # This is not yet the exact real CAD panel map.
+  # It is a reproducible equivalent panel discretization for the thermal-mechanical bridge.
+  use_equivalent_cell_size_from_main_config: true
+
+  # Minimum number of thermal grid points required inside a virtual panel.
+  # Boundary panels can have fewer points; very small fragments are ignored.
+  minimum_grid_points_per_panel: 5
+
+  # Panel thermal-risk thresholds for reporting.
+  delta_rms_thresholds_C:
+    - 0.25
+    - 0.50
+    - 1.00
+    - 2.00
+
+  # Snapshot source from the transient model.
+  snapshot_input_dir: "outputs/thermal_transient"
+
+  # We compute panel maps for all available transient snapshots:
+  # morning, axis, evening, peak, for all seasons and wind speeds.
+  snapshot_glob: "transient_snapshot_*_*.csv"

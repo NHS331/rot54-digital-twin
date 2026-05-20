@@ -1,0 +1,71 @@
+﻿shadow_v2:
+  output_dir: "outputs/shadow_v2"
+  figures_dir: "outputs/figures/shadow_v2"
+
+  # Three representative moments per seasonal case:
+  # morning = one hour after first front-side illumination
+  # axis = maximum alignment between Sun and tilted reflector axis
+  # evening = one hour before last front-side illumination
+  morning_offset_minutes_after_front_start: 60
+  evening_offset_minutes_before_front_end: 60
+
+  numerical_epsilon: 0.000000001
+
+  # Volumetric obstruction model.
+  # Coordinate system:
+  # x, y are in the reflector-local aperture plane.
+  # z is the reflector-local spherical coordinate.
+  #
+  # The surface center is near z = -27 m.
+  # The aperture rim is near z = 0 m.
+  # Obstructions are placed above/near the aperture mouth.
+
+  circular_cylinders:
+    central_hub:
+      enabled: true
+      label: "central_hub"
+      center_x_m: 0.0
+      center_y_m: 0.0
+      radius_m: 2.2
+      z_min_m: -0.5
+      z_max_m: 2.5
+
+    secondary_mirror:
+      enabled: true
+      label: "secondary_mirror"
+      center_x_m: 0.0
+      center_y_m: 0.0
+      radius_m: 2.5
+      z_min_m: 3.5
+      z_max_m: 4.5
+
+    optical_reflector:
+      enabled: true
+      label: "optical_reflector"
+      center_x_m: 0.0
+      center_y_m: 0.0
+      radius_m: 1.3
+      z_min_m: 1.5
+      z_max_m: 2.5
+
+  support_arm_prisms:
+    enabled: true
+    label: "support_arm_prisms"
+
+    # Three-arm first engineering approximation.
+    # Angles are measured counterclockwise from +x in the reflector-local aperture plane.
+    angles_deg:
+      - 90.0
+      - 210.0
+      - 330.0
+
+    # This is intentionally wider than the previous 0.70 m because
+    # the first version visually underestimated structural shadowing.
+    width_m: 1.20
+
+    start_radius_m: 2.0
+    end_radius_m: 27.0
+
+    # Vertical range of the simplified support-arm volume.
+    z_min_m: 0.0
+    z_max_m: 4.5

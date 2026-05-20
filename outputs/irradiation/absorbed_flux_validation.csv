@@ -1,0 +1,10 @@
+case_key,time_code,q_abs_non_negative_ok,q_abs_upper_bound_ok,q_abs_equation_ok,max_q_abs_equation_error_W_m2,all_absorbed_flux_checks_ok
+spring_equinox,axis,True,True,True,0.0,True
+spring_equinox,evening,True,True,True,0.0,True
+spring_equinox,morning,True,True,True,0.0,True
+summer_solstice,axis,True,True,True,0.0,True
+summer_solstice,evening,True,True,True,0.0,True
+summer_solstice,morning,True,True,True,0.0,True
+winter_solstice,axis,True,True,True,0.0,True
+winter_solstice,evening,True,True,True,0.0,True
+winter_solstice,morning,True,True,True,0.0,True

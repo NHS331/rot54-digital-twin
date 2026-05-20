@@ -1,0 +1,12 @@
+antenna:
+  name: "ROT-54/2.6"
+  main_reflector_diameter_m: 54.0
+  effective_aperture_m: 32.0
+  optical_channel_diameter_m: 2.6
+  secondary_mirror_diameter_m: 5.0
+  site_altitude_m: 1711.0
+  axis_tilt_deg: 15.0
+  axis_tilt_direction: "south"
+  working_panel_count: 3738
+  panel_count_status: "computational working value; source verification required"
+  passport_surface_smoothness_micron: 70.0
