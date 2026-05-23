@@ -1,0 +1,44 @@
+shadow_geometry:
+  coordinate_system:
+    origin: main_reflector_center
+    x_axis: east / reflector-local x
+    y_axis: north / reflector-local y
+    z_axis: reflector-local normal direction
+    units: m
+  main_reflector:
+    diameter_m: 54.0
+    radius_m: 27.0
+    effective_aperture_m: 32.0
+    fixed_axis_tilt_south_deg: 15.0
+  tripod_support_bases:
+    description: Internal support bases from which the tripod legs go toward the central
+      structure.
+    critical_correction: The tripod bases are not located at the outer rim of the
+      54 m reflector.
+    radial_distance_from_center_m: 15.5
+    radial_distance_allowed_range_m:
+    - 15.0
+    - 16.0
+    outer_rim_radius_m: 27.0
+    count: 3
+    azimuths_deg_model_initial:
+    - 90.0
+    - 210.0
+    - 330.0
+    azimuth_reference: 0 deg = +x model reference in current scripts; exact measured
+      azimuths remain pending.
+    modelling_status: confirmed_internal_radius_approximate_azimuth_pending
+    future_ray_shadowing_use: true
+  central_structure:
+    description: Central hub / support region connected to the tripod legs.
+    modelling_status: to_be_parameterized_in_stage_7
+  secondary_reflector:
+    diameter_m: 5.0
+    modelling_status: to_be_parameterized_in_stage_7
+  optical_channel:
+    diameter_m: 2.6
+    modelling_status: to_be_parameterized_in_stage_7
+  tripod_legs:
+    start_radius_near_central_hub_m: 2.2
+    end_radius_at_internal_base_m: 15.5
+    must_not_extend_to_outer_rim: true

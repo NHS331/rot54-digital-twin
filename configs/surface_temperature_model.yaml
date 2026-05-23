@@ -1,0 +1,78 @@
+﻿surface_temperature_model:
+  stage: 11
+  model_name: "First-order steady-state surface temperature increment"
+
+  input:
+    control_point_flux_csv: "outputs/solar_flux/control_point_absorbed_flux.csv"
+    panel_grid_csv: "outputs/geometry/panel_grid_3738.csv"
+
+  output:
+    control_point_temperature_csv: "outputs/surface_temperature/control_point_surface_temperature.csv"
+    panel_temperature_summary_csv: "outputs/surface_temperature/panel_temperature_summary.csv"
+    scenario_temperature_summary_csv: "outputs/surface_temperature/scenario_temperature_summary.csv"
+    figures_dir: "outputs/figures/surface_temperature"
+
+  physical_model:
+    equation_delta_t: "Delta_T_s = q_abs / h_eff"
+    equation_surface_temperature: "T_surface_C = T_ambient_C + Delta_T_s"
+    equation_effective_heat_transfer: "h_eff = h_conv + h_rad"
+    equation_convection: "h_conv = 5.7 + 3.8 * wind_speed_m_s"
+    equation_radiative_linearization: "h_rad = 4 * epsilon_lw * sigma * T_ambient_K^3"
+
+    # First engineering long-wave emissivity for aluminium/duralumin surface.
+    # This must remain configurable because real value depends on coating,
+    # oxidation, contamination, and surface finish.
+    surface_emissivity_epsilon_lw: 0.25
+
+    stefan_boltzmann_w_m2_k4: 0.00000005670374419
+
+    # Scenario-level environmental inputs.
+    # These are not yet a full meteorological model.
+    # They are deliberately explicit so later weather/cloud/wind layers can replace them.
+    environment:
+      equinox:
+        morning:
+          ambient_temperature_C: 8.0
+          wind_speed_m_s: 3.0
+        noon:
+          ambient_temperature_C: 16.0
+          wind_speed_m_s: 4.0
+        evening:
+          ambient_temperature_C: 10.0
+          wind_speed_m_s: 3.0
+
+      summer_solstice:
+        morning:
+          ambient_temperature_C: 20.0
+          wind_speed_m_s: 3.0
+        noon:
+          ambient_temperature_C: 32.0
+          wind_speed_m_s: 5.0
+        evening:
+          ambient_temperature_C: 24.0
+          wind_speed_m_s: 3.0
+
+      winter_solstice:
+        morning:
+          ambient_temperature_C: -8.0
+          wind_speed_m_s: 4.0
+        noon:
+          ambient_temperature_C: 1.0
+          wind_speed_m_s: 5.0
+        evening:
+          ambient_temperature_C: -6.0
+          wind_speed_m_s: 4.0
+
+  numerical:
+    expected_panel_count: 3738
+    expected_control_points_per_panel: 5
+    expected_scenarios: 3
+    expected_times_per_scenario: 3
+    min_h_eff_w_m2_k: 3.0
+    max_reasonable_delta_t_C: 80.0
+    epsilon: 0.000000001
+
+  plotting:
+    aperture_radius_m: 27.0
+    marker_size: 3
+    dpi: 300

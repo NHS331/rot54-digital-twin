@@ -1,0 +1,43 @@
+﻿panel_grid:
+  model_name: "ROT-54/2.6 projected panel grid"
+  stage: 8
+
+  main_reflector:
+    diameter_m: 54.0
+    aperture_radius_m: 27.0
+    sphere_radius_m: 27.0
+    effective_aperture_m: 32.0
+    panel_count: 3738
+
+  calculated_cell_parameters:
+    projected_aperture_area_m2: 2290.221044466959
+    projected_cell_area_m2: 0.612686207722568
+    equivalent_cell_size_m: 0.782742744655419
+
+  sampling:
+    method: "sunflower_projected_disk_grid"
+    control_points_per_panel: 5
+    control_point_layout: "center_plus_four_projected_offsets"
+    control_point_offset_factor: 0.45
+    edge_control_point_policy: "clip_to_aperture_radius"
+
+  surface_model:
+    local_coordinate_system:
+      origin: "projected aperture center"
+      x_axis: "reflector-local x"
+      y_axis: "reflector-local y"
+      z_axis: "reflector-local z"
+      units: "m"
+
+    spherical_surface_convention:
+      description: "Lower hemispherical bowl in reflector-local coordinates."
+      equation: "z = -sqrt(R^2 - x^2 - y^2)"
+      front_side_normal: "negative radial unit vector, pointing toward the open side of the bowl"
+
+  tripod_internal_bases:
+    radial_distance_from_center_m: 15.5
+    radial_distance_allowed_range_m: [15.0, 16.0]
+    outer_rim_radius_m: 27.0
+    count: 3
+    azimuths_deg_model_initial: [90.0, 210.0, 330.0]
+    status: "internal_base_radius_corrected_exact_azimuths_pending"

@@ -1,0 +1,53 @@
+﻿paper_targets:
+  year: 2026
+
+  front_side_exposure:
+    summer_solstice_hours: 13.58
+    winter_solstice_hours: 9.29
+    annual_hours: 4275.93
+    tolerance_hours: 0.05
+
+  geometry:
+    main_reflector_diameter_m: 54.0
+    main_reflector_radius_m: 27.0
+    effective_aperture_m: 32.0
+    optical_channel_m: 2.6
+    secondary_mirror_diameter_m: 5.0
+    main_axis_tilt_deg: 15.0
+    panel_count: 3738
+    passport_surface_smoothness_mm: 0.070
+
+  site:
+    name: "Orgov / Aragats Scientific Center"
+    latitude_deg: 40.35
+    longitude_deg: 44.25
+    altitude_m: 1711.0
+    timezone_output: "Asia/Yerevan"
+    internal_time_standard: "UTC"
+
+  panel_model:
+    structural_panel_area_m2: 1.21
+    projected_cell_area_m2: 0.613
+    equivalent_cell_size_m: 0.783
+    effective_panel_span_m: 0.95
+    panel_mass_kg: 55.0
+    aluminum_density_kg_m3: 2700.0
+    mass_equivalent_thickness_mm: 16.8
+
+  mechanical_response:
+    alpha_T_1_per_K: 0.0000232
+    ku_central_low_mm_per_C: 0.080
+    ku_central_high_mm_per_C: 0.096
+    ku_upper_mm_per_C: 0.160
+
+  rms_upper_case:
+    equinox_sigma_T_mm: 0.078
+    summer_sigma_T_mm: 0.098
+    winter_sigma_T_mm: 0.050
+    equinox_sigma_total_mm: 0.105
+    summer_sigma_total_mm: 0.120
+    winter_sigma_total_mm: 0.086
+
+  ruze_upper_case:
+    summer_f10_GHz: 64.4
+    summer_eta_100_GHz: 0.7750

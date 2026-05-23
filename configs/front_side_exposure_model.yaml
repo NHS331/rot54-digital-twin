@@ -1,0 +1,32 @@
+﻿front_side_exposure_model:
+  year: 2026
+  site:
+    latitude_deg: 40.35
+    longitude_deg: 44.25
+    altitude_m: 1711.0
+    timezone_output: "Asia/Yerevan"
+
+  reflector:
+    southward_axis_tilt_deg: 15.0
+    equivalent_front_side_normal_declination_deg: 25.35
+
+  solar_declination:
+    model: "standard_engineering_approximation"
+    formula: "delta_sun_deg = 23.45 * sin(360 * (284 + N) / 365)"
+
+  horizon_models:
+    standard_refraction:
+      apparent_horizon_altitude_deg: -0.833
+
+    geometric_horizon:
+      apparent_horizon_altitude_deg: 0.0
+
+  manuscript_control_targets:
+    summer_solstice_hours: 13.58
+    winter_solstice_hours: 9.29
+    annual_hours: 4275.93
+
+  diagnostic_policy:
+    annual_target_is_not_forced: true
+    report_required_backfit_horizon: true
+    next_action_if_mismatch: "document and decide whether manuscript annual exposure must be corrected"

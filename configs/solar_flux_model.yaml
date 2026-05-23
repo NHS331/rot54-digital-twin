@@ -1,0 +1,50 @@
+﻿solar_flux_model:
+  stage: 10
+  model_name: "Absorbed solar flux from ray-based visibility function"
+
+  input:
+    visibility_csv: "outputs/shadow_ray/control_point_visibility.csv"
+    panel_grid_csv: "outputs/geometry/panel_grid_3738.csv"
+
+  output:
+    control_point_flux_csv: "outputs/solar_flux/control_point_absorbed_flux.csv"
+    panel_flux_summary_csv: "outputs/solar_flux/panel_absorbed_flux_summary.csv"
+    scenario_flux_summary_csv: "outputs/solar_flux/scenario_absorbed_flux_summary.csv"
+    figures_dir: "outputs/figures/solar_flux"
+
+  physical_model:
+    equation: "q_abs = alpha_s * dni_w_m2 * mu_front * chi"
+
+    # First engineering value for aluminium / duralumin reflector surface.
+    # This is intentionally explicit and configurable.
+    # It must later be replaced or bracketed by measured/coating-specific data.
+    solar_absorptivity_alpha_s: 0.25
+
+    # Direct normal irradiance values are scenario-level engineering inputs.
+    # They are not yet a full meteorological model.
+    # Stage 10 only propagates visibility into absorbed flux.
+    scenario_dni_w_m2:
+      equinox:
+        morning: 700.0
+        noon: 850.0
+        evening: 700.0
+      summer_solstice:
+        morning: 780.0
+        noon: 950.0
+        evening: 780.0
+      winter_solstice:
+        morning: 500.0
+        noon: 650.0
+        evening: 500.0
+
+  numerical:
+    expected_panel_count: 3738
+    expected_control_points_per_panel: 5
+    expected_scenarios: 3
+    expected_times_per_scenario: 3
+    epsilon: 0.000000001
+
+  plotting:
+    aperture_radius_m: 27.0
+    marker_size: 3
+    dpi: 300

@@ -1,0 +1,40 @@
+﻿scenarios:
+  equinox:
+    label: "Equinox"
+    date: "2026-03-20"
+    wind_speeds_m_per_s: [0.0, 5.0]
+
+  summer_solstice:
+    label: "Summer solstice"
+    date: "2026-06-22"
+    wind_speeds_m_per_s: [0.0, 5.0]
+
+  winter_solstice:
+    label: "Winter solstice"
+    date: "2026-12-22"
+    wind_speeds_m_per_s: [0.0, 5.0]
+
+annual_statistics:
+  year: 2026
+  timezone_output: "Asia/Yerevan"
+  internal_time_standard: "UTC"
+
+future_validation_cases:
+  sensitivity:
+    wind_speeds_m_per_s: [0.0, 1.0, 3.0, 5.0]
+    ku_mm_per_C: [0.080, 0.096, 0.160]
+
+  convergence:
+    panel_sampling_modes:
+      - "center_1_point"
+      - "five_points"
+      - "nine_points"
+      - "dense_reference"
+
+  ablation:
+    cases:
+      - "full_model"
+      - "no_self_shadowing"
+      - "no_wind_cooling"
+      - "no_incidence_projection"
+      - "mean_panel_temperature_only"

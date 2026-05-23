@@ -1,0 +1,33 @@
+﻿dense_surface_temperature_map:
+  stage: "11b"
+  model_name: "Dense interpolated surface temperature maps"
+
+  input:
+    control_point_temperature_csv: "outputs/surface_temperature/control_point_surface_temperature.csv"
+
+  output:
+    dense_grid_summary_csv: "outputs/surface_temperature_dense/dense_temperature_grid_summary.csv"
+    dense_npz_dir: "outputs/surface_temperature_dense"
+    figures_dir: "outputs/figures/surface_temperature_dense"
+
+  interpolation:
+    method: "matplotlib_linear_triangulation"
+    source_point_count_per_case: 18690
+
+    # 1600 x 1600 square grid gives about 2.0 million valid aperture points.
+    # This is more than 100x denser than the 18,690 Stage 11 control points.
+    dense_grid_size: 1600
+
+    aperture_radius_m: 27.0
+    minimum_density_multiplier: 100.0
+
+  fields:
+    primary_field: "delta_t_s_C"
+    secondary_field: "surface_temperature_C"
+
+  plotting:
+    dpi: 300
+    figure_size_inches: 8
+    colormap: "inferno"
+    use_raster_heatmap: true
+    draw_aperture_boundary: true
