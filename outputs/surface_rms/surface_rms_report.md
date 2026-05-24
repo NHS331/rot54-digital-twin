@@ -18,12 +18,12 @@ This step aggregates panel-level normal thermomechanical response into aperture-
 - Snapshot: `peak`
 - Wind: `v00`
 - Local time: ``
-- `σ_T upper`: `0.138802 mm`
-- `σ_Σ upper`: `0.155454 mm`
-- `f10 upper total`: `49.813 GHz`
-- `η_R total upper at 4.5 GHz`: `0.999141`
-- `η_R total upper at 30 GHz`: `0.962507`
-- `η_R total upper at 100 GHz`: `0.654029`
+- `σ_T upper`: `0.145711 mm`
+- `σ_Σ upper`: `0.161653 mm`
+- `f10 upper total`: `47.903 GHz`
+- `η_R total upper at 4.5 GHz`: `0.999071`
+- `η_R total upper at 30 GHz`: `0.959519`
+- `η_R total upper at 100 GHz`: `0.631826`
 
 ## Validation
 

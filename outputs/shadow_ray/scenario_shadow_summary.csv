@@ -1,0 +1,10 @@
+scenario_key,scenario_label,date,day_of_year,time_key,control_point_count,illuminated_count,shadowed_count,shadow_fraction,mean_mu_front,not_front_side_count,central_hub_count,secondary_mirror_count,optical_reflector_count,tripod_count
+equinox,Equinox,2026-03-20,79,evening,18690,13193,5497,0.294114500,0.392404775803,4962,29,48,10,448
+equinox,Equinox,2026-03-20,79,morning,18690,13182,5508,0.294703050,0.392480210611,4958,28,49,10,463
+equinox,Equinox,2026-03-20,79,noon,18690,16909,1781,0.095291600,0.604705214574,960,33,154,0,634
+summer_solstice,Summer solstice,2026-06-22,173,evening,18690,13545,5145,0.275280899,0.407984120536,4629,33,55,10,418
+summer_solstice,Summer solstice,2026-06-22,173,morning,18690,13535,5155,0.275815944,0.408058915101,4631,33,56,10,425
+summer_solstice,Summer solstice,2026-06-22,173,noon,18690,18030,660,0.035313002,0.665749000593,66,0,166,0,428
+winter_solstice,Winter solstice,2026-12-22,356,evening,18690,12745,5945,0.318084537,0.368143424895,5482,28,39,10,386
+winter_solstice,Winter solstice,2026-12-22,356,morning,18690,12737,5953,0.318512574,0.368221173502,5493,29,36,8,387
+winter_solstice,Winter solstice,2026-12-22,356,noon,18690,14861,3829,0.204868914,0.479590645722,3184,41,94,6,504

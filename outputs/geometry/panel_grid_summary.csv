@@ -1,0 +1,13 @@
+quantity,value
+panel_count,3738
+control_points_per_panel,5
+total_control_points,18690
+aperture_radius_m,27.0
+projected_aperture_area_m2,2290.221044466959
+projected_cell_area_m2,0.612686207722568
+equivalent_cell_size_m,0.7827427468348512
+control_point_offset_factor,0.45
+control_point_offset_m,0.35223423607568305
+clipped_control_point_count,126
+tripod_base_radius_m,15.5
+tripod_base_count,3

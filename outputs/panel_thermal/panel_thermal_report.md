@@ -6,14 +6,14 @@ This step converts pointwise transient thermal snapshots into an equivalent pane
 
 ## Worst panel-level snapshot
 
-- Source snapshot: `transient_snapshot_spring_equinox_evening_v00.csv`
-- Case: `spring_equinox`
+- Source snapshot: `transient_snapshot_winter_solstice_evening_v00.csv`
+- Case: `winter_solstice`
 - Snapshot code: `evening`
 - Wind code: `v00`
-- Local time: `2026-03-20T18:10:00+04:00`
-- Maximum panel RMS temperature nonuniformity: `9.986754 °C`
-- 95th percentile panel RMS temperature nonuniformity: `0.907874 °C`
-- Maximum panel peak-to-peak temperature difference: `24.998614 °C`
+- Local time: `2026-12-22T16:40:00+04:00`
+- Maximum panel RMS temperature nonuniformity: `9.084490 °C`
+- 95th percentile panel RMS temperature nonuniformity: `1.079769 °C`
+- Maximum panel peak-to-peak temperature difference: `25.048111 °C`
 
 ## Validation
 

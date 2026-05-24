@@ -6,22 +6,22 @@ This step converts equivalent panel-level thermal nonuniformity into normal ther
 
 ## Worst response snapshot
 
-- Source: `panel_thermal_spring_equinox_evening_v00.csv`
-- Case: `spring_equinox`
+- Source: `panel_thermal_winter_solstice_evening_v00.csv`
+- Case: `winter_solstice`
 - Snapshot: `evening`
 - Wind: `v00`
-- Maximum upper-bound panel RMS response: `1.597881 mm`
-- 95th percentile upper-bound panel RMS response: `0.145260 mm`
-- Maximum central-max panel RMS response: `0.958728 mm`
-- Maximum peak-to-peak upper response: `3.999778 mm`
+- Maximum upper-bound panel RMS response: `1.453518 mm`
+- 95th percentile upper-bound panel RMS response: `0.172763 mm`
+- Maximum central-max panel RMS response: `0.872111 mm`
+- Maximum peak-to-peak upper response: `4.007698 mm`
 
 ## Worst panel
 
-- Panel ID: `P_0066_0022`
-- x: `25.070 m`
-- y: `-9.383 m`
-- Panel ΔT RMS: `9.986754 °C`
-- Upper RMS response: `1.597881 mm`
+- Panel ID: `P_0059_0057`
+- x: `19.589 m`
+- y: `18.023 m`
+- Panel ΔT RMS: `9.084490 °C`
+- Upper RMS response: `1.453518 mm`
 
 ## Validation
 

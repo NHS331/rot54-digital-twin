@@ -1,4 +1,4 @@
-﻿shadow_v2:
+shadow_v2:
   output_dir: outputs/shadow_v2
   figures_dir: outputs/figures/shadow_v2
   morning_offset_minutes_after_front_start: 60
@@ -33,9 +33,9 @@
     enabled: true
     label: support_arm_prisms_internal_tripod
     angles_deg:
-    - 90.0
-    - 210.0
-    - 330.0
+    - 270.0
+    - 30.0
+    - 150.0
     width_m: 1.2
     start_radius_m: 2.2
     end_radius_m: 15.5
@@ -50,5 +50,3 @@
     outer_rim_radius_m: 27.0
     confirmed_not_outer_rim: true
     geometry_status: corrected_internal_base_radius_pending_exact_azimuths
-
-

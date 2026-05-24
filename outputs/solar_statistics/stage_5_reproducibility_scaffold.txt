@@ -1,0 +1,3 @@
+Stage 5 scaffold created.
+Scientific control layer is now available.
+Next technical step: connect existing solar geometry modules to annual front-side exposure calculation.
